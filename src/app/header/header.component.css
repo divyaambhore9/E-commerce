@@ -1,0 +1,73 @@
+
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    height: 50px;
+}
+/* .navbar{
+    /* box-shadow:5px 5px 10px #a056b3; 
+   background-color: black;
+} */
+.navbar-brand{
+    font-size:27px;
+    font-weight: bold;
+    color: white;
+   
+}
+
+/* .navbar-brand:hover{
+    border-style:outset;
+} */
+form {
+    outline: cornflowerblue;
+    height: 40px;
+    width: 100%;
+    max-width: 500px;
+ display: flex;
+ align-items: center;
+ border-radius: 60px;
+ padding:3px 10px;
+
+ 
+}
+
+
+
+form input{
+    height: 40px;
+    border: 0;
+  background-color: #ffffff;
+     
+    }
+
+form button{
+    width: 35px;
+    border:2px;
+    border-radius: 50%;
+    height:33px;
+    background-color:white;
+    cursor: pointer;
+    color: white;
+}
+
+/* form button:hover{
+    background-color: rgb(236, 70, 195);
+}
+  */
+ul li a{
+    color:  white;
+    font-size:large;
+    font-weight: bold;
+    padding-inline: 1rem;
+    padding-left: 10px;
+}
+/* ul li a:hover{
+    text-shadow:7px 7px #e284ff3a  ;
+    font-size: 19px;
+    color:rgb(228, 45, 235) ;
+} */

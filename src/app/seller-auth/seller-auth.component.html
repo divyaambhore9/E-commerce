@@ -1,0 +1,136 @@
+<div class="card c1 m-4" *ngIf="!showLogin">
+    <div class="container my-5 mx-2">
+        <div class="row sample">
+            <div class="col-md-5">
+                <div class="card seller" >
+                    <div class="sign-up ">
+                        <h3 class="my-2" style="text-align: center; font-weight: bold; text-decoration: underline; ">
+                            Sign Up</h3>
+                        <form [formGroup]="sellerreg" class="col-xs-6 ">
+                            <div >
+                                <div class="form-group ">
+                                    <label>
+                                        <h5>Name:</h5>
+                                    </label>
+                                    <input type="text" class="form-control" formControlName="name" name="name">
+                                </div>
+                               </div>
+                               <div >
+                                <div class="form-group">
+                                    <label>
+                                        <h5>Email Id:</h5>
+                                    </label>
+                                    <input type="text" class="form-control" formControlName="email" name="email">
+                                </div>
+                            </div>
+                            <div >
+                                <div class="form-group">
+                                    <label>
+                                        <h5>Password:</h5>
+                                    </label>
+                                    <input type="text" class="form-control" formControlName="password" name="password">
+                                </div>
+                            </div>
+                          
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-dark mt-3">Submit</button>
+                            </div>
+                            <div class="a" >
+                                <a class="card-link mt-3" style="text-decoration: underline;" (click)="openLogin()">Already have an account? 
+                                    <!-- <br> click to login -->
+                                </a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-7 img">
+              <img src="https://www.pexels.com/photo/assorted-color-leather-bag-display-inside-room-135620/" style="width: 50rem; height: 350px;" alt="" class="img-fluid">
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<div class="card c2 m-4" *ngIf="showLogin">
+    <div class="container my-5 mx-2">
+        <div class="row sample">
+            <div class="col-md-5">
+                <div class="card seller" >
+                    <div class="sign-in ">
+                        <h3 class="my-2" style="text-align: center; font-weight: bold; text-decoration: underline; ">
+                            Sign In</h3>
+                        <form [formGroup]="seller_login" class="col-xs-6 ">
+
+                            <div class="Form-Group">
+                                <label class="Form-label" style="margin-top: 5px;">
+                                    <h5>Email</h5> </label>
+                                <input type="email" name="email" class="form-control" formControlName="email"
+                                    placeholder="enter email"><small class="text-danger"
+                                    *ngIf="!seller_login.get('email')?.valid && seller_login.get('email')?.touched">Enter Your Valid
+                                    Email</small>
+            
+                            </div>
+                            <div class="Form-Group">
+                                <label class="Form-label" style="margin-top: 5px;">
+                                    <h5>Password</h5></label>
+                                <input type="password" name="password" class="form-control" formControlName="password"
+                                    placeholder="enter password">
+                                <small class="text-danger"
+                                    *ngIf="!seller_login.get('password')?.valid && seller_login.get('password')?.touched">Enter Your
+                                    Password</small>
+                            </div>
+                            <div style="text-align: center; margin-top: 5px; ">
+                                <button type="submit" class="btn btn-dark form-control mt-2" >Sign-in</button>
+                            </div>
+                            <div class="har d-flex justify-content-between p-3" style="text-decoration: underline;">
+                                <a class="card-link mt-3" [routerLink]="['/']">Forget-password</a>
+                                <a class="card-link mt-3" (click)="openSignup()">sign-up</a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-7 img">
+              <img src="https://www.pexels.com/photo/assorted-color-leather-bag-display-inside-room-135620/" style="width: 50rem; height: 350px;" alt="" class="img-fluid">
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- 
+<div class=" container bg-light my-5" id="hi" *ngIf="showLogin">
+    <div class="row justify-content-center">
+        <div class="col-xs-6 col-md-6 ">
+
+            <form [formGroup]="seller_login">
+
+                <h3 class="card-title  text-center mt-2" style="text-align: center; font-weight: bold; text-decoration: underline;">Sign-In</h3>
+                <hr>
+                <div class="Form-Group">
+                    <label class="Form-label">Email</label>
+                    <input type="email" name="email" class="form-control" formControlName="email"
+                        placeholder="enter email"><small class="text-danger"
+                        *ngIf="!seller_login.get('email')?.valid && seller_login.get('email')?.touched">Enter Your Valid
+                        Email</small>
+
+                </div>
+                <div class="Form-Group">
+                    <label class="Form-label">Password</label>
+                    <input type="password" name="pwd" class="form-control" formControlName="password"
+                        placeholder="enter password">
+                    <small class="text-danger"
+                        *ngIf="!seller_login.get('password')?.valid && seller_login.get('password')?.touched">Enter Your
+                        Password</small>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-dark form-control mt-2" >Sign-in</button>
+                </div>
+                <div class="har d-flex justify-content-between ">
+                    <a class="card-link mt-3" [routerLink]="['/']">Forget-password-?</a>
+                    <a class="card-link mt-3" (click)="openSignup()">sign-up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
